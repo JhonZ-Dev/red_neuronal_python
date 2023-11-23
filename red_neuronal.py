@@ -10,3 +10,4 @@ x_train, x_test = x_train / 255.0, x_test / 255.0  # Normalizar píxeles a valor
 y_train, y_test = to_categorical(y_train), to_categorical(y_test)  # Convertir etiquetas a one-hot encoding
 # Construir el modelo de red neuronal
 model = models.Sequential()
+model.add(layers.Flatten(input_shape=(28, 28)))  # Capa de aplanamiento para convertir imágenes 28x28 en un vector de 1D
