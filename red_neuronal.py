@@ -18,3 +18,5 @@ model.add(layers.Dense(10, activation='softmax'))  # Capa de salida con 10 unida
 model.compile(optimizer='adam',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
+# Entrenar el modelo
+model.fit(x_train, y_train, epochs=5, validation_data=(x_test, y_test))
