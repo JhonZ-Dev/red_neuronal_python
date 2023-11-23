@@ -11,3 +11,4 @@ y_train, y_test = to_categorical(y_train), to_categorical(y_test)  # Convertir e
 # Construir el modelo de red neuronal
 model = models.Sequential()
 model.add(layers.Flatten(input_shape=(28, 28)))  # Capa de aplanamiento para convertir imágenes 28x28 en un vector de 1D
+model.add(layers.Dense(128, activation='relu'))  # Capa densa con 128 unidades y función de activación ReLU
