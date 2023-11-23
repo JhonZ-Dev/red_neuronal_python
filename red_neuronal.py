@@ -14,3 +14,7 @@ model.add(layers.Flatten(input_shape=(28, 28)))  # Capa de aplanamiento para con
 model.add(layers.Dense(128, activation='relu'))  # Capa densa con 128 unidades y función de activación ReLU
 model.add(layers.Dropout(0.2))  # Capa de dropout para regularización
 model.add(layers.Dense(10, activation='softmax'))  # Capa de salida con 10 unidades para las 10 clases y función de activación softmax
+# Compilar el modelo
+model.compile(optimizer='adam',
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
